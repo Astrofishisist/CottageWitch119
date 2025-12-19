@@ -27,7 +27,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install modules
+        run: yarn
+
       - name: ESLint
-        uses: stefanoeb/eslint-action@1.0.2
-        with:
-          files: kubejs/**/*.js
+        run: eslint . --ext .js
