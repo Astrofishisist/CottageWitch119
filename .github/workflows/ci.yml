@@ -28,7 +28,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install modules
-        run: yarn
+        run: yarn install
 
       - name: ESLint
-        run: eslint . --ext .js
+        run: yarn eslint --fix kubejs/**/*.js
